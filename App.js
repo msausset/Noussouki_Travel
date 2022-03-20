@@ -17,7 +17,7 @@ export default function App() {
           name="Home"
           component={Home}
           options={{
-            title: "NOUSSOUKI TRA",
+            title: "NOUSSOUKI TRAVEL",
             headerStyle: {
               backgroundColor: "#3290D1",
             },

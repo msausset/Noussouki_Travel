@@ -2,6 +2,7 @@ import React from "react";
 import { View, TextInput, Pressable, Text } from "react-native";
 import Style from "../Style";
 import inscriptionUsers from "../services/apiUsers";
+import { FlatList, ScrollView } from "react-native-gesture-handler";
 
 export default class Inscription extends React.Component {
   constructor(props) {

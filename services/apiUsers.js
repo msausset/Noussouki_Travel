@@ -1,7 +1,7 @@
 class apiUsers {
   Inscription(data) {
     console.log(data);
-    fetch(" http://127.0.0.1:5500/users/", {
+    fetch("http://192.168.1.90:5500/users/", {
       method: "POST",
       headers: {
         Accept: "application/json",
