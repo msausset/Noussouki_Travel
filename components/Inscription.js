@@ -1,8 +1,8 @@
 import React from "react";
-import { View, TextInput, Pressable, Text } from "react-native";
+import { View, TextInput, Pressable, Text, Alert } from "react-native";
 import Style from "../Style";
 import inscriptionUsers from "../services/apiUsers";
-import { FlatList, ScrollView } from "react-native-gesture-handler";
+import phoneOK from "../services/Regex";
 
 export default class Inscription extends React.Component {
   constructor(props) {
@@ -18,7 +18,18 @@ export default class Inscription extends React.Component {
   }
 
   submitHandler() {
+    phoneOK.Validation(this.state.phone);
     inscriptionUsers.Inscription(this.state);
+    Alert.alert(
+      "Succès",
+      `Inscription prise en compte avec les renseignements suivants : \n` +
+        this.state.firstName +
+        "\n" +
+        this.state.lastName +
+        "\n" +
+        this.state.phone +
+        "\n"
+    );
   }
 
   render() {
